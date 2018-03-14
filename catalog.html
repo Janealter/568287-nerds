@@ -37,7 +37,70 @@
 
   <aside class="filter">
     <h2 class="visually-hidden">Фильтр</h2>
-    <!-- Форма фильтра -->
+    <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="cost">
+        <legend>Стоимость:</legend>
+        <label class="visually-hidden" for="filter-form-cost">От и до</label>
+        <input type="range" id="filter-form-cost" name="cost" value="0" min="0" max="15000">
+        <label>
+          От <input type="number" name="cost" value="0" min="0">
+        </label>
+        <label>
+          До <input type="number" name="cost" value="15000" max="15000">
+        </label>
+      </fieldset>
+      <fieldset class="grid-type">
+        <legend>Сетка:</legend>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="grid-type" value="adaptive" checked> Адаптивная
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="grid-type" value="fixed"> Фиксированная
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="grid-type" value="floating"> Резиновая
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="features">
+        <legend>Особенности:</legend>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="slider" checked> Слайдер
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="features-block"> Блок преимуществ
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="news" checked> Новости
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="gallery"> Галерея
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="cart"> Корзина
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="btn btn-gray" type="submit">Показать</button>
+    </form>
   </aside>
 
   <section class="products">
@@ -169,7 +232,7 @@
           <a class="btn-page" href="#">3</a>
         </li>
       </ul>
-      <a class="btn-page-next" href="#">Следующая</a>
+      <a class="btn btn-gray next-page" href="#">Следующая</a>
     </section>
 
   </section>
