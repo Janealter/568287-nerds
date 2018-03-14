@@ -218,9 +218,24 @@
 
 <section class="contact-us-popup">
   <h2>Напишите нам</h2>
-  <button class="close">
-    <img src="img/close-cross.png" alt="Закрыть окно" width="21" height="21">
-  </button>
+  <button class="close">Закрыть</button>
+  <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+    <fieldset>
+      <ul>
+        <li>
+          <label for="contact-form-name">Ваше имя:</label>
+          <input type="text" id="contact-form-name" name="name" placeholder="Имя Фамилия">
+        </li>
+        <li>
+          <label for="contact-form-email">Ваш e-mail:</label>
+          <input type="email" id="contact-form-email" name="email" placeholder="email@example.com">
+        </li>
+      </ul>
+      <label for="contact-form-text">Текст письма:</label>
+      <textarea id="contact-form-text" name="text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+    </fieldset>
+    <button class="btn btn-red" type="submit">Отправить</button>
+  </form>
   <!-- Форма обратной связи -->
 </section>
 
