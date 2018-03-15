@@ -40,8 +40,9 @@
     <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="cost">
         <legend>Стоимость:</legend>
-        <label class="visually-hidden" for="filter-form-cost">От и до</label>
-        <input type="range" id="filter-form-cost" name="cost" value="0" min="0" max="15000">
+        <div class="cost-range">
+          <!-- Здесь будет двойной range-элемент -->
+        </div>
         <label>
           От <input type="number" name="cost" value="0" min="0">
         </label>
