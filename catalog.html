@@ -36,12 +36,76 @@
   </header>
 
   <aside class="filter">
-    <h2 class="hidden">Фильтр</h2>
-    <!-- Форма фильтра -->
+    <h2 class="visually-hidden">Фильтр</h2>
+    <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="filter-group">
+        <legend>Стоимость:</legend>
+        <div class="cost-range">
+          <!-- Здесь будет двойной range-элемент -->
+        </div>
+        <label>
+          От <input type="number" name="cost" value="0" min="0">
+        </label>
+        <label>
+          До <input type="number" name="cost" value="15000" max="15000">
+        </label>
+      </fieldset>
+      <fieldset class="filter-group">
+        <legend>Сетка:</legend>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="grid-type" value="adaptive" checked> Адаптивная
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="grid-type" value="fixed"> Фиксированная
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="grid-type" value="floating"> Резиновая
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="filter-group">
+        <legend>Особенности:</legend>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="slider" checked> Слайдер
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="features-block"> Блок преимуществ
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="news" checked> Новости
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="gallery"> Галерея
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="cart"> Корзина
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="btn btn-gray" type="submit">Показать</button>
+    </form>
   </aside>
 
   <section class="products">
-    <h2 class="hidden">Товары</h2>
+    <h2 class="visually-hidden">Товары</h2>
 
     <section class="sort">
       <h3>Сортировать:</h3>
@@ -61,7 +125,7 @@
     </section>
 
     <section class="list">
-      <h3 class="hidden">Список товаров</h3>
+      <h3 class="visually-hidden">Список товаров</h3>
       <ul>
         <li>
           <section class="product">
@@ -72,7 +136,7 @@
             </ul>
             <img src="img/sedona.jpg" alt="Шаблон 'Sedona'" width="360" height="576">
             <div class="popup-info">
-              <h4 class="hidden">Sedona</h4>
+              <h4 class="visually-hidden">Sedona</h4>
               <p>Информационный сайт для туристов</p>
               <button class="btn btn-red add-to-cart">9900 руб.</button>
             </div>
@@ -87,7 +151,7 @@
             </ul>
             <img src="img/pink.jpg" alt="Шаблон 'PINK'" width="360" height="576">
             <div class="popup-info">
-              <h4 class="hidden">PINK</h4>
+              <h4 class="visually-hidden">PINK</h4>
               <p>Продуктовый лендинг приложения для iOS и Android</p>
               <button class="btn btn-red add-to-cart">9900 руб.</button>
             </div>
@@ -102,7 +166,7 @@
             </ul>
             <img src="img/barbershop.jpg" alt="Шаблон 'Barbershop Borodinski'" width="360" height="576">
             <div class="popup-info">
-              <h4 class="hidden">Barbershop Borodinski</h4>
+              <h4 class="visually-hidden">Barbershop Borodinski</h4>
               <p>Сайт салона красоты. Для мужчин, да.</p>
               <button class="btn btn-red add-to-cart">9900 руб.</button>
             </div>
@@ -117,7 +181,7 @@
             </ul>
             <img src="img/mishka.jpg" alt="Шаблон 'Mishka'" width="360" height="576">
             <div class="popup-info">
-              <h4 class="hidden">Mishka</h4>
+              <h4 class="visually-hidden">Mishka</h4>
               <p>Интернет-магазин вязаных игрушек</p>
               <button class="btn btn-red add-to-cart">9900 руб.</button>
             </div>
@@ -132,7 +196,7 @@
             </ul>
             <img src="img/aplus.jpg" alt="Шаблон 'A+'" width="360" height="576">
             <div class="popup-info">
-              <h4 class="hidden">A+</h4>
+              <h4 class="visually-hidden">A+</h4>
               <p>Лендинг курсов повышения квалификации</p>
               <button class="btn btn-red add-to-cart">9900 руб.</button>
             </div>
@@ -147,7 +211,7 @@
             </ul>
             <img src="img/kvast.jpg" alt="Шаблон 'Кваст'" width="360" height="576">
             <div class="popup-info">
-              <h4 class="hidden">Кваст</h4>
+              <h4 class="visually-hidden">Кваст</h4>
               <p>Промо-сайт производителя крафтового кваса</p>
               <button class="btn btn-red add-to-cart">9900 руб.</button>
             </div>
@@ -157,7 +221,7 @@
     </section>
 
     <section class="pagination">
-      <h3 class="hidden">Пагинация</h3>
+      <h3 class="visually-hidden">Пагинация</h3>
       <ul>
         <li>
           <a class="btn-page" href="#">1</a>
@@ -169,7 +233,7 @@
           <a class="btn-page" href="#">3</a>
         </li>
       </ul>
-      <a class="btn-page-next" href="#">Следующая</a>
+      <a class="btn btn-gray next-page" href="#">Следующая</a>
     </section>
 
   </section>
@@ -179,13 +243,13 @@
 <footer class="main-footer">
 
   <section class="location">
-    <h2 class="hidden">Расположение</h2>
+    <h2 class="visually-hidden">Расположение</h2>
     <img class="map" src="img/map.jpg" alt="Карта" height="416">
     <img class="marker" src="img/nerds-map-marker.png" alt="Метка" width="231" height="190">
   </section>
 
   <section class="contacts">
-    <h2 class="hidden">Контакты</h2>
+    <h2 class="visually-hidden">Контакты</h2>
     <b class="name">Nёrds design studio</b>
     <p class="address">191186, Санкт-Петербург,
       ул. Б. Конюшенная, д. 19/8</p>
@@ -194,7 +258,7 @@
   </section>
 
   <section class="social-media">
-    <h2 class="hidden">Социальные сети</h2>
+    <h2 class="visually-hidden">Социальные сети</h2>
     <div class="links">
       <ul>
         <li>
@@ -218,9 +282,22 @@
 
 <section class="contact-us-popup">
   <h2>Напишите нам</h2>
-  <button class="close">
-    <img src="img/close-cross.png" alt="Закрыть окно" width="21" height="21">
-  </button>
+  <button class="close">Закрыть</button>
+  <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+    <fieldset>
+      <div class="field">
+        <label for="contact-form-name">Ваше имя:</label>
+        <input type="text" id="contact-form-name" name="name" placeholder="Имя Фамилия">
+      </div>
+      <div class="field">
+        <label for="contact-form-email">Ваш e-mail:</label>
+        <input type="email" id="contact-form-email" name="email" placeholder="email@example.com">
+      </div>
+      <label for="contact-form-text">Текст письма:</label>
+      <textarea id="contact-form-text" name="text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+    </fieldset>
+    <button class="btn btn-red" type="submit">Отправить</button>
+  </form>
   <!-- Форма обратной связи -->
 </section>
 
