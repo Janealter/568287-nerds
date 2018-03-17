@@ -3,22 +3,15 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url('/fonts/Roboto-Regular.woff2') format('woff2');
+  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto-Regular.woff2') format('woff2');
 }
-
-/*@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
-}*/
 
 /* Roboto Medium */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url('/fonts/Roboto-Medium.woff2') format('woff2');
+  src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/Roboto-Medium.woff2') format('woff2');
 }
 
 /* Roboto Bold */
@@ -26,8 +19,10 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url('/fonts/Roboto-Bold.woff2') format('woff2');
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/Roboto-Bold.woff2') format('woff2');
 }
+
+/* Общие элементы */
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -35,4 +30,351 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #fb565a;
+}
+
+a:active {
+  color: rgba(0, 0, 0, 0.302);
+}
+
+.main-header ul {
+  list-style: none;
+}
+
+.main-container ul {
+  list-style: none;
+}
+
+.main-footer ul {
+  list-style: none;
+}
+
+.btn {
+  color: #ffffff;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+
+.btn:active {
+  color: rgba(255, 255, 255, 0.302);
+}
+
+.btn.btn-red {
+  background-color: #fb565a;
+}
+
+.btn.btn-red:hover {
+  background-color: #e74246;
+}
+
+.btn.btn-red:active {
+  background-color: #d7373b;
+}
+
+.btn.btn-green {
+  background-color: #00ca74;
+}
+
+.btn.btn-green:hover {
+  background-color: #00bc6c;
+}
+
+.btn.btn-green:active {
+  background-color: #00aa62;
+}
+
+.btn.btn-yellow {
+  background-color: #efc84a;
+}
+
+.btn.btn-yellow:hover {
+  background-color: #eab534;
+}
+
+.btn.btn-yellow:active {
+  background-color: #e5a722;
+}
+
+.btn.btn-gray {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.btn.btn-gray:hover {
+  background-color: #dfdfdf;
+}
+
+.btn.btn-gray:active {
+  color: rgba(0, 0, 0, 0.302);
+  background-color: #d5d5d5;
+}
+
+/* Шапка */
+
+.main-header {
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  background-color: #eeeeee;
+}
+
+.main-header .main-logo:hover {
+  opacity: 0.8;
+}
+
+.main-header .main-logo:active {
+  opacity: 0.3;
+}
+
+.main-header .cart-link {
+  background-image: url('../img/cart-icon.svg');
+  background-repeat: no-repeat;
+}
+
+/* Основная часть: верхние элементы */
+
+.feature-slider,
+.catalog-header {
+  background-color: #eeeeee;
+}
+
+.feature-slider .lead,
+.catalog-header h1 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+/* Основная часть: нижние элементы
+ * Главная страница
+ */
+
+.services h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.company-description .lead {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.company-description .order-types-header,
+.company-description h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.company-description h3 {
+  font-size: 16px;
+}
+
+.company-description .features {
+  background-image: url('../img/nerds-color-logo.jpg');
+  background-repeat: no-repeat;
+}
+
+.company-description th {
+  line-height: 18px;
+}
+
+.company-description td {
+  font-size: 45px;
+  line-height: 10.06px;
+  font-weight: 700;
+}
+
+.company-description .percent {
+  font-size: 24px;
+  vertical-align: super;
+}
+
+.projects .htmlacademy {
+  background-image: url('../img/htmlacademy-logo.png');
+  background-repeat: no-repeat;
+}
+
+.projects .htmlacademy:hover {
+   background-image: url('../img/htmlacademy-logo-hover.png');
+ }
+
+.projects .htmlacademy:active {
+  background-image: url('../img/htmlacademy-logo-active.png');
+}
+
+.projects .borodinski {
+  background-image: url('../img/borodinski-logo.png');
+  background-repeat: no-repeat;
+}
+
+.projects .borodinski:hover {
+  background-image: url('../img/borodinski-logo-hover.png');
+}
+
+.projects .borodinski:active {
+  background-image: url('../img/borodinski-logo-active.png');
+}
+
+.projects .pink {
+  background-image: url('../img/pink-logo.png');
+  background-repeat: no-repeat;
+}
+
+.projects .pink:hover {
+  background-image: url('../img/pink-logo-hover.png');
+}
+
+.projects .pink:active {
+  background-image: url('../img/pink-logo-active.png');
+}
+
+.projects .mishka {
+  background-image: url('../img/mishka-logo.png');
+  background-repeat: no-repeat;
+}
+
+.projects .mishka:hover {
+  background-image: url('../img/mishka-logo-hover.png');
+}
+
+.projects .mishka:active {
+  background-image: url('../img/mishka-logo-active.png');
+}
+
+/* Основная часть: нижние элементы
+ * Каталог
+ */
+
+.filter legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.filter-group-cost label,
+.filter-group-cost input {
+  line-height: 22px;
+}
+
+.filter-group label {
+  color: #283136;
+  line-height: 20px;
+}
+
+.filter-group label:hover {
+   color: #000000;
+   line-height: 20px;
+ }
+
+.filter-group label:active {
+  color: rgba(40, 49, 54, 0.302);
+  line-height: 20px;
+}
+
+.sort h3 {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.sort .btn-sort {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.sort .btn-sort:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sort .btn-sort:active {
+  color: rgba(0, 0, 0, 0.302);
+}
+
+.product h4{
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.product p {
+  line-height: 18px;
+}
+
+/* Подвал */
+
+.contacts .name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contacts .address,
+.contacts .phone-number {
+  line-height: 18px;
+}
+
+.social-media .vk {
+  background-image: url('../img/vkontakte-icon.svg');
+  background-repeat: no-repeat;
+}
+
+.social-media .facebook {
+  background-image: url('../img/facebook-icon.svg');
+  background-repeat: no-repeat;
+}
+
+.social-media .instagram {
+  background-image: url('../img/instagram-icon.svg');
+  background-repeat: no-repeat;
+}
+
+.social-media .lead {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.social-media p {
+  line-height: 22px;
+}
+
+/* Форма обратной связи */
+
+.contact-us-popup h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.contact-us-popup .close {
+  background-image: url('../img/close-cross.png');
+  background-repeat: no-repeat;
+}
+
+.contact-form label {
+  font-weight: 700;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+  line-height: 18px;
 }
