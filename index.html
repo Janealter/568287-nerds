@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс - Главная страница</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -76,13 +78,19 @@
     <div class="indicators">
       <ul>
         <li>
-          <input class="indicator" type="radio">
+          <label>
+            <input name="slider-indicator" class="indicator" type="radio" value="Слайд 1" checked> Слайд 1
+          </label>
         </li>
         <li>
-          <input class="indicator" type="radio">
+          <label>
+            <input name="slider-indicator" class="indicator" type="radio" value="Слайд 2"> Слайд 2
+          </label>
         </li>
         <li>
-          <input class="indicator" type="radio">
+          <label>
+            <input name="slider-indicator" class="indicator" type="radio" value="Слайд 3"> Слайд 3
+          </label>
         </li>
       </ul>
     </div>
@@ -127,7 +135,7 @@
       <b class="lead">Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
       <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
         превыше креатива. Работаем не покладая рук, как роботы.</p>
-      <b>Выполняем заказы на разработку:</b>
+      <b class="order-types-header">Выполняем заказы на разработку:</b>
       <ul class="order-types">
         <li>Веб-сайтов любой сложности</li>
         <li>Мобильных приложений для iOS и Android</li>
@@ -146,9 +154,9 @@
         </thead>
         <tbody>
         <tr>
-          <td>146%</td>
-          <td>100%</td>
-          <td>50%</td>
+          <td>146<span class="percent">%</span></td>
+          <td>100<span class="percent">%</span></td>
+          <td>50<span class="percent">%</span></td>
         </tr>
         </tbody>
       </table>
@@ -161,16 +169,24 @@
     <h2 class="visually-hidden">Наши проекты</h2>
     <ul>
       <li>
-        <a class="htmlacademy" href="#">HTML Academy</a>
+        <a class="htmlacademy" href="#">
+          <img src="img/htmlacademy-logo.png" alt="HTML Academy">
+        </a>
       </li>
       <li>
-        <a class="barbershop" href="#">Barbershop Borodinski</a>
+        <a class="borodinski" href="#">
+          <img src="img/borodinski-logo.png" alt="Barbershop Borodinski">
+        </a>
       </li>
       <li>
-        <a class="pink" href="#">PINK</a>
+        <a class="pink" href="#">
+          <img src="img/pink-logo.png" alt="PINK">
+        </a>
       </li>
       <li>
-        <a class="mishka" href="#">Mishka</a>
+        <a class="mishka" href="#">
+          <img src="img/mishka-logo.png" alt="Mishka">
+        </a>
       </li>
     </ul>
   </section>
