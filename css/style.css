@@ -212,56 +212,33 @@ a:active {
   vertical-align: super;
 }
 
-.projects .htmlacademy {
-  background-image: url('../img/htmlacademy-logo.png');
+.projects a {
+  opacity: 0.2;
   background-repeat: no-repeat;
 }
 
-.projects .htmlacademy:hover {
-  background-image: url('../img/htmlacademy-logo-hover.png');
+.projects a:hover {
+  opacity: 1;
 }
 
-.projects .htmlacademy:active {
-  background-image: url('../img/htmlacademy-logo-active.png');
+.projects a:active {
+  opacity: 0.1;
+}
+
+.projects .htmlacademy {
+  background-image: url('../img/htmlacademy-logo.png');
 }
 
 .projects .borodinski {
   background-image: url('../img/borodinski-logo.png');
-  background-repeat: no-repeat;
-}
-
-.projects .borodinski:hover {
-  background-image: url('../img/borodinski-logo-hover.png');
-}
-
-.projects .borodinski:active {
-  background-image: url('../img/borodinski-logo-active.png');
 }
 
 .projects .pink {
   background-image: url('../img/pink-logo.png');
-  background-repeat: no-repeat;
-}
-
-.projects .pink:hover {
-  background-image: url('../img/pink-logo-hover.png');
-}
-
-.projects .pink:active {
-  background-image: url('../img/pink-logo-active.png');
 }
 
 .projects .mishka {
   background-image: url('../img/mishka-logo.png');
-  background-repeat: no-repeat;
-}
-
-.projects .mishka:hover {
-  background-image: url('../img/mishka-logo-hover.png');
-}
-
-.projects .mishka:active {
-  background-image: url('../img/mishka-logo-active.png');
 }
 
 /* Основная часть: нижние элементы
