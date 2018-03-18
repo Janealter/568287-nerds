@@ -321,19 +321,20 @@ a:active {
   line-height: 18px;
 }
 
+.social-media a {
+  background-repeat: no-repeat;
+}
+
 .social-media .vk {
   background-image: url('../img/vkontakte-icon.svg');
-  background-repeat: no-repeat;
 }
 
 .social-media .facebook {
   background-image: url('../img/facebook-icon.svg');
-  background-repeat: no-repeat;
 }
 
 .social-media .instagram {
   background-image: url('../img/instagram-icon.svg');
-  background-repeat: no-repeat;
 }
 
 .social-media .lead {
