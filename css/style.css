@@ -269,7 +269,14 @@ a:active {
  */
 
 .catalog-header {
+  padding-top: 78px;
+  padding-bottom: 103px;
   text-align: center;
+}
+
+.catalog {
+  padding-top: 57px;
+  padding-bottom: 60px;
 }
 
 .filter legend {
