@@ -372,20 +372,15 @@ a:active {
   padding: 0;
 }
 
-.products .list {
+.product-list ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-h3 {
-  display: none;
-}
-
 .product {
   width: 360px;
   text-align: center;
-  /*margin-right: 40px;*/
 }
 
 .product h4 {
