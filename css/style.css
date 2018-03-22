@@ -134,10 +134,11 @@ a:active {
 
 .main-header {
   background-color: #eeeeee;
-  width: 1200px;
+  /*width: 1200px;*/
+  width: 1440px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 140px;
+  padding-right: 140px;
   box-sizing: border-box;
 }
 
@@ -173,6 +174,15 @@ a:active {
   font-weight: 500;
 }
 
+.feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-slider ul {
+  padding: 0;
+}
+
 .main-header h1 {
   text-align: center;
 }
@@ -196,6 +206,16 @@ a:active {
   padding-bottom: 80px;
 }
 
+.services ul {
+  display: flex;
+  padding: 0;
+}
+
+.services .service {
+  width: 300px;
+  margin-right: 100px;
+}
+
 .services h3 {
   font-size: 24px;
   line-height: 30px;
@@ -204,8 +224,14 @@ a:active {
 }
 
 .company-description {
+  display: flex;
+  justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 76px;
+}
+
+.company-description .desc {
+  width: 600px;
 }
 
 .company-description .lead {
@@ -226,6 +252,7 @@ a:active {
 }
 
 .company-description .features {
+  width: 360px;
   background-image: url('../img/nerds-color-logo.jpg');
   background-repeat: no-repeat;
 }
@@ -249,6 +276,12 @@ a:active {
   padding-top: 46px;
   padding-bottom: 44px;
   margin-bottom: 80px;
+}
+
+.projects ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
 }
 
 .projects a {
@@ -275,8 +308,14 @@ a:active {
 }
 
 .catalog {
+  display: flex;
+  justify-content: space-between;
   padding-top: 57px;
   padding-bottom: 60px;
+}
+
+.filter {
+  width: 260px;
 }
 
 .filter legend {
@@ -325,8 +364,28 @@ a:active {
   color: rgba(0, 0, 0, 0.302);
 }
 
+.products {
+  width: 760px;
+}
+
+.products ul {
+  padding: 0;
+}
+
+.products .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+h3 {
+  display: none;
+}
+
 .product {
+  width: 360px;
   text-align: center;
+  /*margin-right: 40px;*/
 }
 
 .product h4 {
@@ -349,15 +408,21 @@ a:active {
 }
 
 .location {
+  position: relative;
   margin-left: -120px;
 }
 
 .location .marker {
+  position: absolute;
+  bottom: 0;
+  left: 820px;
   margin-top: 89px;
   margin-bottom: 137px;
 }
 
 .contacts {
+  position: absolute;
+  bottom: 0;
   width: 319px;
   margin-top: 54px;
   margin-bottom: 54px;
@@ -384,8 +449,17 @@ a:active {
   padding-bottom: 70px;
 }
 
+.social-media {
+  display: flex;
+}
+
 .social-media a {
   background-repeat: no-repeat;
+}
+
+.social-media .links {
+  width: 260px;
+  margin-right: 140px;
 }
 
 .social-media .vk {
