@@ -29,12 +29,13 @@
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
+  /*width: 100%;*/
+  /*width: 1440px;*/
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
-  width: 1440px;
   margin: 0 auto;
 }
 
@@ -51,16 +52,11 @@ a:active {
   color: rgba(0, 0, 0, 0.302);
 }
 
-.main-header ul {
-  list-style: none;
-}
-
-.main-container ul {
-  list-style: none;
-}
-
-.main-footer ul {
-  list-style: none;
+.content-container {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -134,12 +130,10 @@ a:active {
 
 .main-header {
   background-color: #eeeeee;
-  /*width: 1200px;*/
-  width: 1440px;
-  margin: 0 auto;
-  padding-left: 140px;
-  padding-right: 140px;
-  box-sizing: border-box;
+}
+
+.main-header ul {
+  list-style: none;
 }
 
 .nav-wrapper {
@@ -189,12 +183,8 @@ a:active {
 
 /* Основная часть */
 
-.main-container {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
+.main-container ul {
+  list-style: none;
 }
 
 /* Основная часть:
@@ -394,25 +384,26 @@ a:active {
 
 /* Подвал */
 
-.main-footer {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
+.main-footer ul {
+  list-style: none;
 }
 
 .location {
   position: relative;
-  margin-left: -120px;
+  display: block;
+  height: 416px;
+  background-image: url('../img/map.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 58% 32%;
 }
 
 .location .marker {
+  display: inline-block;
   position: absolute;
   bottom: 0;
-  left: 820px;
-  margin-top: 89px;
-  margin-bottom: 137px;
+  top: 32%;
+  left: 58%;
 }
 
 .contacts {
