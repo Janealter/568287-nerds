@@ -29,11 +29,14 @@
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
+  /*width: 100%;*/
+  /*width: 1440px;*/
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
+  margin: 0 auto;
 }
 
 a {
@@ -49,16 +52,11 @@ a:active {
   color: rgba(0, 0, 0, 0.302);
 }
 
-.main-header ul {
-  list-style: none;
-}
-
-.main-container ul {
-  list-style: none;
-}
-
-.main-footer ul {
-  list-style: none;
+.content-container {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -131,11 +129,16 @@ a:active {
 /* Шапка */
 
 .main-header {
-  line-height: 30px;
-  font-weight: 500;
-  text-transform: uppercase;
-
   background-color: #eeeeee;
+}
+
+.main-header ul {
+  list-style: none;
+}
+
+.nav-wrapper {
+  padding-top: 49px;
+  margin-bottom: 18px;
 }
 
 .main-header .main-logo:hover {
@@ -146,34 +149,79 @@ a:active {
   opacity: 0.3;
 }
 
+.main-header .main-nav,
+.main-header .cart-link{
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 .main-header .cart-link {
   background-image: url('../img/cart-icon.svg');
   background-repeat: no-repeat;
 }
 
-/* Основная часть: верхние элементы */
-
-.feature-slider,
-.catalog-header {
-  background-color: #eeeeee;
-}
-
 .feature-slider .lead,
-.catalog-header h1 {
+.main-header h1 {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
 }
 
-/* Основная часть: нижние элементы
+.feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-slider ul {
+  padding: 0;
+}
+
+.main-header h1 {
+  text-align: center;
+}
+
+/* Основная часть */
+
+.main-container ul {
+  list-style: none;
+}
+
+/* Основная часть:
  * Главная страница
  */
+
+.services {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.services ul {
+  display: flex;
+  padding: 0;
+}
+
+.services .service {
+  width: 300px;
+  margin-right: 100px;
+}
 
 .services h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.company-description {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 76px;
+}
+
+.company-description .desc {
+  width: 600px;
 }
 
 .company-description .lead {
@@ -194,6 +242,7 @@ a:active {
 }
 
 .company-description .features {
+  width: 360px;
   background-image: url('../img/nerds-color-logo.jpg');
   background-repeat: no-repeat;
 }
@@ -213,6 +262,18 @@ a:active {
   vertical-align: super;
 }
 
+.projects {
+  padding-top: 46px;
+  padding-bottom: 44px;
+  margin-bottom: 80px;
+}
+
+.projects ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
 .projects a {
   opacity: 0.2;
   background-repeat: no-repeat;
@@ -226,12 +287,25 @@ a:active {
   opacity: 0.1;
 }
 
-/* Основная часть: нижние элементы
+/* Основная часть:
  * Каталог
  */
 
 .catalog-header {
+  padding-top: 78px;
+  padding-bottom: 103px;
   text-align: center;
+}
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 57px;
+  padding-bottom: 60px;
+}
+
+.filter {
+  width: 260px;
 }
 
 .filter legend {
@@ -280,7 +354,22 @@ a:active {
   color: rgba(0, 0, 0, 0.302);
 }
 
+.products {
+  width: 760px;
+}
+
+.products ul {
+  padding: 0;
+}
+
+.product-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .product {
+  width: 360px;
   text-align: center;
 }
 
@@ -295,6 +384,40 @@ a:active {
 
 /* Подвал */
 
+.main-footer ul {
+  list-style: none;
+}
+
+.location {
+  position: relative;
+  display: block;
+  height: 416px;
+  background-image: url('../img/map.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 58% 32%;
+}
+
+.location .marker {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  top: 32%;
+  left: 58%;
+}
+
+.contacts {
+  position: absolute;
+  bottom: 0;
+  width: 319px;
+  margin-top: 54px;
+  margin-bottom: 54px;
+  padding-top: 54px;
+  padding-bottom: 47px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .contacts .name {
   font-size: 18px;
   line-height: 30px;
@@ -307,8 +430,22 @@ a:active {
   line-height: 18px;
 }
 
+.social-media {
+  padding-top: 69px;
+  padding-bottom: 70px;
+}
+
+.social-media {
+  display: flex;
+}
+
 .social-media a {
   background-repeat: no-repeat;
+}
+
+.social-media .links {
+  width: 260px;
+  margin-right: 140px;
 }
 
 .social-media .vk {
@@ -334,6 +471,14 @@ a:active {
 }
 
 /* Форма обратной связи */
+
+.contact-us-popup {
+  width: 960px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  box-sizing: border-box;
+}
 
 .contact-us-popup h2 {
   font-size: 45px;
