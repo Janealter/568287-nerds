@@ -600,10 +600,57 @@ li:nth-child(3n) > .service {
 }
 
 .filter-group.cost .cost-range {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
   height: 80px;
   background-color: #eeeeee;
   margin-bottom: 14px;
   border-radius: 3px;
+}
+
+.cost-range .range-line-wrapper {
+  display: flex;
+  align-items: center;
+  width: 219px;
+}
+
+.cost-range .left-range-line {
+  width: 0;
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.cost-range .middle-range-line {
+  width: 151px;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.cost-range .right-range-line {
+  width: 68px;
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.cost-range label {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 29px;
+  width: 20px;
+  height: 23px;
+  background-image: url('../img/filter-button.png');
+  background-repeat: no-repeat;
+}
+
+.cost-range .cost-from-slider-label {
+  left: 18px;
+}
+
+.cost-range .cost-to-slider-label {
+  left: 160px;
 }
 
 .cost-wrapper {
@@ -622,6 +669,7 @@ li:nth-child(3n) > .service {
 }
 
 .filter-group.cost input {
+  cursor: text;
   display: block;
   width: 65px;
   border: none;
@@ -644,6 +692,14 @@ li:nth-child(3n) > .service {
 
 .filter-group li:last-child {
   margin-bottom: 0;
+}
+
+.filter-group input {
+  cursor: pointer;
+}
+
+.filter-group label {
+  cursor: pointer;
 }
 
 .filter-group {
