@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Нёрдс - Каталог</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -46,76 +46,80 @@
           <div class="cost-range">
             <!-- Три линии нужны для оживления слайдера на JS -->
             <div class="range-line-wrapper">
-              <div class="left-range-line"></div>
-              <div class="middle-range-line"></div>
-              <div class="right-range-line"></div>
+              <span class="left-range-line"></span>
+              <span class="middle-range-line"></span>
+              <span class="right-range-line"></span>
             </div>
-            <label class="cost-from-slider-label" for="cost-from-slider">
-              <span class="text-hidden">От</span>
-            </label>
-            <input class="cost-from-slider" id="cost-from-slider" type="hidden" value="0" min="0">
-            <label class="cost-to-slider-label" for="cost-to-slider">
-              <span class="text-hidden">До</span>
-            </label>
-            <input class="cost-to-slider" id="cost-to-slider" type="hidden" value="15000" max="23000">
+            <span class="cost-from-slider-handle"></span>
+            <input class="cost-from-slider" id="cost-from-slider" type="hidden" value="0">
+            <span class="cost-to-slider-handle"></span>
+            <input class="cost-to-slider" id="cost-to-slider" type="hidden" value="15000">
           </div>
           <div class="cost-wrapper">
             <div class="cost-group">
               <label for="cost-from">От </label>
-              <input id="cost-from" type="number" name="cost-from" value="0" min="0">
+              <input id="cost-from" type="number" name="cost-from" value="0" min="0" max="22999">
             </div>
             <div class="cost-group">
               <label for="cost-to">До </label>
-              <input id="cost-to" type="number" name="cost-to" value="15000" max="23000">
+              <input id="cost-to" type="number" name="cost-to" value="15000" min="1" max="23000">
             </div>
           </div>
         </fieldset>
-        <fieldset class="filter-group">
+        <fieldset class="filter-group grid">
           <legend>Сетка:</legend>
           <ul>
             <li>
-              <label>
-                <input type="radio" name="grid-type" value="adaptive" checked> Адаптивная
+              <label class="radio-button-label">
+                <input class="visually-hidden" type="radio" name="grid-type" value="adaptive" checked> Адаптивная
+                <span class="radio-button"></span>
               </label>
             </li>
             <li>
-              <label>
-                <input type="radio" name="grid-type" value="fixed"> Фиксированная
+              <label class="radio-button-label">
+                <input type="radio" class="visually-hidden" name="grid-type" value="fixed"> Фиксированная
+                <span class="radio-button"></span>
               </label>
             </li>
             <li>
-              <label>
-                <input type="radio" name="grid-type" value="floating"> Резиновая
+              <label class="radio-button-label">
+                <input class="visually-hidden" type="radio" name="grid-type" value="floating"> Резиновая
+                <span class="radio-button"></span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-group">
+        <fieldset class="filter-group features">
           <legend>Особенности:</legend>
           <ul>
             <li>
-              <label>
-                <input type="checkbox" name="slider" checked> Слайдер
+              <label class="checkbox-label">
+                <input class="visually-hidden" type="checkbox" name="slider" checked> Слайдер
+                <span class="checkbox"></span>
               </label>
             </li>
             <li>
-              <label>
-                <input type="checkbox" name="features-block"> Блок преимуществ
+              <label class="checkbox-label">
+                <input class="visually-hidden" type="checkbox" name="features-block"> Блок преимуществ
+                <span class="checkbox"></span>
               </label>
             </li>
             <li>
-              <label>
-                <input type="checkbox" name="news" checked> Новости
+              <label class="checkbox-label">
+                <input class="visually-hidden" type="checkbox" name="news" checked> Новости
+                <span class="checkbox"></span>
               </label>
             </li>
             <li>
-              <label>
-                <input type="checkbox" name="gallery"> Галерея
+              <label class="checkbox-label">
+                <input class="visually-hidden" type="checkbox" name="gallery"> Галерея
+                <span class="checkbox"></span>
               </label>
             </li>
             <li>
-              <label>
-                <input type="checkbox" name="cart"> Корзина
+              <label class="checkbox-label">
+                <input class="visually-hidden" type="checkbox" name="cart"> Корзина
+                <span class="checkbox"></span>
               </label>
             </li>
           </ul>
