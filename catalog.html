@@ -11,8 +11,8 @@
 
 <header class="main-header">
   <div class="nav-wrapper content-container">
-    <a href="index.html">
-      <img class="main-logo" src="img/nerds-logo.svg" alt="Логотип 'Nerds'" width="160" height="65">
+    <a class="main-logo" href="index.html">
+      <img src="img/nerds-logo.svg" alt="Логотип 'Nerds'" width="160" height="65">
     </a>
     <nav class="main-nav">
       <ul>
@@ -23,7 +23,7 @@
           <a href="#clients">Клиенты</a>
         </li>
         <li>
-          <a href="catalog.html">Магазин</a>
+          <a class="active" href="catalog.html">Магазин</a>
         </li>
         <li>
           <a href="#contacts">Контакты</a>
@@ -32,7 +32,7 @@
     </nav>
     <a class="cart-link" href="cart.html">Корзина</a>
   </div>
-  <h1 class="catalog-header">Магазин готовых шаблонов</h1>
+  <h1 class="catalog-header content-container">Магазин готовых шаблонов</h1>
 </header>
 
 <main class="main-container content-container">
@@ -44,14 +44,31 @@
         <fieldset class="filter-group cost">
           <legend>Стоимость:</legend>
           <div class="cost-range">
-            <!-- Здесь будет двойной range-элемент -->
+            <!-- Три линии нужны для оживления слайдера на JS -->
+            <div class="range-line-wrapper">
+              <div class="left-range-line"></div>
+              <div class="middle-range-line"></div>
+              <div class="right-range-line"></div>
+            </div>
+            <label class="cost-from-slider-label" for="cost-from-slider">
+              <span class="text-hidden">От</span>
+            </label>
+            <input class="cost-from-slider" id="cost-from-slider" type="hidden" value="0" min="0">
+            <label class="cost-to-slider-label" for="cost-to-slider">
+              <span class="text-hidden">До</span>
+            </label>
+            <input class="cost-to-slider" id="cost-to-slider" type="hidden" value="15000" max="23000">
           </div>
-          <label>
-            От <input type="number" name="cost" value="0" min="0">
-          </label>
-          <label>
-            До <input type="number" name="cost" value="15000" max="15000">
-          </label>
+          <div class="cost-wrapper">
+            <div class="cost-group">
+              <label for="cost-from">От </label>
+              <input id="cost-from" type="number" name="cost-from" value="0" min="0">
+            </div>
+            <div class="cost-group">
+              <label for="cost-to">До </label>
+              <input id="cost-to" type="number" name="cost-to" value="15000" max="23000">
+            </div>
+          </div>
         </fieldset>
         <fieldset class="filter-group">
           <legend>Сетка:</legend>
@@ -114,7 +131,7 @@
         <h3>Сортировать:</h3>
         <ul>
           <li>
-            <a class="btn-sort" href="#">По цене</a>
+            <a class="btn-sort active" href="#">По цене</a>
           </li>
           <li>
             <a class="btn-sort" href="#">По типу</a>
@@ -123,8 +140,10 @@
             <a class="btn-sort" href="#">По названию</a>
           </li>
         </ul>
-        <a class="btn-sort-desc" href="#">По убыванию</a>
-        <a class="btn-sort-asc" href="#">По возрастанию</a>
+        <div class="sort-wrapper">
+          <a class="btn-sort-desc active" href="#"><span class="text-hidden">По убыванию</span></a>
+          <a class="btn-sort-asc" href="#"><span class="text-hidden">По возрастанию</span></a>
+        </div>
       </section>
 
       <section class="product-list">
@@ -132,91 +151,109 @@
         <ul>
           <li>
             <section class="product">
-              <ul class="browser-header">
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-              </ul>
+              <div class="browser-header">
+                <ul>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                </ul>
+              </div>
               <img src="img/sedona.jpg" alt="Шаблон 'Sedona'" width="360" height="576">
               <div class="popup-info">
-                <h4 class="visually-hidden">Sedona</h4>
-                <p>Информационный сайт для туристов</p>
-                <button class="btn btn-red add-to-cart">9900 руб.</button>
+                <h4>Sedona</h4>
+                <p>Информационный сайт<br>
+                  для туристов</p>
+                <button class="btn btn-red add-to-cart">9 900 руб.</button>
               </div>
             </section>
           </li>
           <li>
             <section class="product">
-              <ul class="browser-header">
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-              </ul>
+              <div class="browser-header">
+                <ul>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                </ul>
+              </div>
               <img src="img/pink.jpg" alt="Шаблон 'PINK'" width="360" height="576">
               <div class="popup-info">
-                <h4 class="visually-hidden">PINK</h4>
-                <p>Продуктовый лендинг приложения для iOS и Android</p>
-                <button class="btn btn-red add-to-cart">9900 руб.</button>
+                <h4>PINK App</h4>
+                <p>Продуктовый лендинг<br>
+                  приложения для iOS и Android</p>
+                <button class="btn btn-red add-to-cart">9 900 руб.</button>
               </div>
             </section>
           </li>
           <li>
             <section class="product">
-              <ul class="browser-header">
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-              </ul>
+              <div class="browser-header">
+                <ul>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                </ul>
+              </div>
               <img src="img/barbershop.jpg" alt="Шаблон 'Barbershop Borodinski'" width="360" height="576">
               <div class="popup-info">
-                <h4 class="visually-hidden">Barbershop Borodinski</h4>
-                <p>Сайт салона красоты. Для мужчин, да.</p>
-                <button class="btn btn-red add-to-cart">9900 руб.</button>
+                <h4>Barbershop</h4>
+                <p>Сайт салона красоты.<br>
+                  Для мужчин, да.</p>
+                <button class="btn btn-red add-to-cart">9 900 руб.</button>
               </div>
             </section>
           </li>
           <li>
             <section class="product">
-              <ul class="browser-header">
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-              </ul>
+              <div class="browser-header">
+                <ul>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                </ul>
+              </div>
               <img src="img/mishka.jpg" alt="Шаблон 'Mishka'" width="360" height="576">
               <div class="popup-info">
-                <h4 class="visually-hidden">Mishka</h4>
-                <p>Интернет-магазин вязаных игрушек</p>
-                <button class="btn btn-red add-to-cart">9900 руб.</button>
+                <h4>Mishka</h4>
+                <p>Интернет-магазин<br>
+                  вязаных игрушек</p>
+                <button class="btn btn-red add-to-cart">9 900 руб.</button>
               </div>
             </section>
           </li>
           <li>
             <section class="product">
-              <ul class="browser-header">
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-              </ul>
+              <div class="browser-header">
+                <ul>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                </ul>
+              </div>
               <img src="img/aplus.jpg" alt="Шаблон 'A+'" width="360" height="576">
               <div class="popup-info">
-                <h4 class="visually-hidden">A+</h4>
-                <p>Лендинг курсов повышения квалификации</p>
-                <button class="btn btn-red add-to-cart">9900 руб.</button>
+                <h4>A Plus</h4>
+                <p>Лендинг курсов повышения<br>
+                  квалификации</p>
+                <button class="btn btn-red add-to-cart">9 900 руб.</button>
               </div>
             </section>
           </li>
           <li>
             <section class="product">
-              <ul class="browser-header">
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-                <li class="browser-button"></li>
-              </ul>
+              <div class="browser-header">
+                <ul>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                  <li class="browser-button"></li>
+                </ul>
+              </div>
               <img src="img/kvast.jpg" alt="Шаблон 'Кваст'" width="360" height="576">
               <div class="popup-info">
-                <h4 class="visually-hidden">Кваст</h4>
-                <p>Промо-сайт производителя крафтового кваса</p>
-                <button class="btn btn-red add-to-cart">9900 руб.</button>
+                <h4>Кваст</h4>
+                <p>Промо-сайт производителя<br>
+                  крафтового кваса</p>
+                <button class="btn btn-red add-to-cart">9 900 руб.</button>
               </div>
             </section>
           </li>
@@ -227,13 +264,13 @@
         <h3 class="visually-hidden">Пагинация</h3>
         <ul>
           <li>
-            <a class=" btn btn-gray btn-page" href="#">1</a>
+            <a class=" btn btn-gray page active" href="#">1</a>
           </li>
           <li>
-            <a class="btn btn-gray btn-page" href="#">2</a>
+            <a class="btn btn-gray page" href="#">2</a>
           </li>
           <li>
-            <a class="btn btn-gray btn-page" href="#">3</a>
+            <a class="btn btn-gray page" href="#">3</a>
           </li>
         </ul>
         <a class="btn btn-gray next-page" href="#">Следующая</a>
@@ -252,7 +289,7 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <b class="name">Nёrds design studio</b>
-      <p class="address">191186, Санкт-Петербург,
+      <p class="address">191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8</p>
       <p class="phone-number">тел. +7 (812) 275-75-75</p>
       <a class="btn btn-red contact-us" href="contacts.html">Напишите нам</a>
@@ -267,13 +304,13 @@
     <div class="links">
       <ul>
         <li>
-          <a class="vk" href="http://vk.com" title="Вконтакте">Вконтакте</a>
+          <a class="vk" href="http://vk.com" title="Вконтакте"><span class="text-hidden">Вконтакте</span></a>
         </li>
         <li>
-          <a class="facebook" href="http://facebook.com" title="Facebook">Facebook</a>
+          <a class="facebook" href="http://facebook.com" title="Facebook"><span class="text-hidden">Facebook</span></a>
         </li>
         <li>
-          <a class="instagram" href="http://instagram.com" title="Instagram">Instagram</a>
+          <a class="instagram" href="http://instagram.com" title="Instagram"><span class="text-hidden">Instagram</span></a>
         </li>
       </ul>
     </div>
@@ -286,24 +323,29 @@
 </footer>
 
 <section class="contact-us-popup">
-  <h2>Напишите нам</h2>
-  <button class="close">Закрыть</button>
+  <header>
+    <h2>Напишите нам</h2>
+    <button class="close" type="button"><span class="text-hidden">Закрыть</span></button>
+  </header>
   <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
     <fieldset>
-      <div class="field">
-        <label for="contact-form-name">Ваше имя:</label>
-        <input type="text" id="contact-form-name" name="name" placeholder="Имя Фамилия">
+      <div class="name-and-email-wrapper">
+        <div class="contact-us-field">
+          <label for="contact-form-name">Ваше имя:</label>
+          <input type="text" id="contact-form-name" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="contact-us-field">
+          <label for="contact-form-email">Ваш e-mail:</label>
+          <input type="email" id="contact-form-email" name="email" placeholder="email@example.com">
+        </div>
       </div>
-      <div class="field">
-        <label for="contact-form-email">Ваш e-mail:</label>
-        <input type="email" id="contact-form-email" name="email" placeholder="email@example.com">
+      <div class="contact-us-field text">
+        <label for="contact-form-text">Текст письма:</label>
+        <textarea id="contact-form-text" name="text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
       </div>
-      <label for="contact-form-text">Текст письма:</label>
-      <textarea id="contact-form-text" name="text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
     </fieldset>
     <button class="btn btn-red" type="submit">Отправить</button>
   </form>
-  <!-- Форма обратной связи -->
 </section>
 
 </body>
